@@ -8,7 +8,7 @@ export class EventsController {
   @Sse('sse')
   sendEvents(): Observable<MessageEvent> {
     return interval(1000).pipe(
-        take(10),
+        take(5),
         map((num: number) => ({
             data: { message: `Hello! Notifivation number ${num}` },
             // lastEventId: `${num}`,

@@ -4,11 +4,11 @@ import { AppService } from './app.service';
 import { EventsController } from './sseNotificationEvents/events.controller';
 import { EventsModule } from './sseNotificationEvents/events.module';
 import { AuthModule } from './auth/auth.module';
-import { AuthController } from './auth/auth.controller';
+import { ChatModule } from './chat/chat.module';
 
 
 @Module({
-  imports: [EventsModule, AuthModule],
+  imports: [EventsModule, AuthModule, ChatModule],
   controllers: [AppController, EventsController],
   providers: [AppService],
 })
